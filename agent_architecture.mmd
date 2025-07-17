@@ -1,0 +1,102 @@
+graph TD
+    %% User and Entry Point
+    U[User Input] --> MW[MultiAgentWorkflow]
+    
+    %% Main Workflow Nodes
+    MW --> CI[classify_intent]
+    CI --> PA[plan_actions]
+    PA --> EA[execute_actions]
+    EA --> GR[generate_response]
+    EA --> HE[handle_error]
+    
+    %% Orchestrator Agent
+    CI --> OA[OrchestratorAgent]
+    PA --> OA
+    OA --> |Intent Classification| UI[UserIntent]
+    OA --> |Action Planning| AL[AgentAction List]
+    OA --> |Coordination| SAG[Specialized Agents]
+    
+    %% Specialized Agents
+    SAG --> PDA[ProductDiscoveryAgent]
+    SAG --> PTA[ProductDetailAgent]
+    SAG --> CA[ClarificationAgent]
+    
+    %% ProductDiscoveryAgent Actions
+    PDA --> |search_products| SP[Product Search]
+    PDA --> |recommend_items| RI[Recommendations]
+    PDA --> |general_response| GEN[General Response]
+    PDA --> |clarify_params| CLP[Parameter Clarification]
+    
+    %% ProductDetailAgent Actions
+    PTA --> |get_product_details| GPD[Product Details]
+    PTA --> |compare_products| CP[Product Comparison]
+    
+    %% ClarificationAgent Actions
+    CA --> |clarify_params| CLPR[Clarification Response]
+    CA --> |generate_form| GF[Form Generation]
+    
+    %% Base Agent
+    BA[BaseAgent] --> |Abstract Base| PDA
+    BA --> |Abstract Base| PTA
+    BA --> |Abstract Base| CA
+    
+    %% Data Layer
+    REPO[Repository Layer] --> |Product Data| PDA
+    REPO --> |Product Data| PTA
+    REPO --> |Business Config| OA
+    
+    %% Repository Types
+    REPO --> SQLite[SQLite Repository]
+    REPO --> API[API Repository]
+    REPO --> Memory[Memory Repository]
+    
+    %% Configuration
+    BC[BusinessConfig] --> |Business Rules| OA
+    BC --> |Conversation Flows| OA
+    BC --> |Action Types| OA
+    
+    %% Response Generation
+    GR --> |Product List| PL[Product List Response]
+    GR --> |Product Detail| PD[Product Detail Response]
+    GR --> |Comparison| PCR[Product Comparison Response]
+    GR --> |Text| TR[Text Response]
+    GR --> |Form| FR[Form Response]
+    
+    %% Error Handling
+    HE --> |Error Response| ER[Error Response]
+    
+    %% Conditional Routing
+    EA --> |Success| CONT{Continue?}
+    CONT --> |Yes| GR
+    CONT --> |Error| HE
+    
+    %% Business Types
+    BT[BusinessType] --> |E-commerce| EC[E-commerce Config]
+    BT --> |Banking| BK[Banking Config]
+    BT --> |Travel| TR[Travel Config]
+    
+    %% Response Formats
+    RF[ResponseFormat] --> |TEXT| TXT[Text Message]
+    RF --> |PRODUCT_LIST| PLS[Product Carousel]
+    RF --> |PRODUCT_DETAIL| PDT[Product Detail Card]
+    RF --> |PRODUCT_COMPARISON| PCO[Comparison Table]
+    RF --> |FORM| FRM[Interactive Form]
+    
+    %% Session Management
+    SM[Session Management] --> |Conversation State| CS[ConversationState]
+    CS --> |Message History| MH[Message History]
+    CS --> |User Context| UC[User Context]
+    CS --> |Session ID| SI[Session ID]
+    
+    %% Styling
+    classDef workflow fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    classDef agent fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef action fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
+    classDef data fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef response fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    
+    class MW,CI,PA,EA,GR,HE,CONT workflow
+    class OA,PDA,PTA,CA,BA agent
+    class SP,RI,GEN,CLP,GPD,CP,CLPR,GF action
+    class REPO,SQLite,API,Memory,BC,BT,SM data
+    class PL,PD,PCR,TR,FR,ER,RF response
