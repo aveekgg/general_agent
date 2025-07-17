@@ -1,0 +1,202 @@
+[
+    {
+        "id": "laptop_dell_xps13_silver",
+        "name": "Dell XPS 13 Silver",
+        "description": "Ultra-portable 13.3-inch laptop with Intel Core i7 processor, 16GB RAM, and 512GB SSD. Perfect for professionals and students.",
+        "price": 899.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "silver",
+            "processor": "Intel Core i7-1165G7",
+            "ram": "16GB",
+            "storage": "512GB SSD",
+            "screen_size": "13.3 inch",
+            "brand": "Dell",
+            "rating": 4.5,
+            "weight": "2.8 lbs",
+            "os": "Windows 11"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/dell-xps13-silver.jpg"
+    },
+    {
+        "id": "laptop_hp_pavilion_red",
+        "name": "HP Pavilion 15 Red",
+        "description": "Affordable 15.6-inch laptop with AMD Ryzen 5 processor, 8GB RAM, and 512GB SSD. Great for everyday use.",
+        "price": 649.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "red",
+            "processor": "AMD Ryzen 5",
+            "ram": "8GB",
+            "storage": "512GB SSD",
+            "screen_size": "15.6 inch",
+            "brand": "HP",
+            "rating": 4.2,
+            "weight": "3.75 lbs",
+            "os": "Windows 11"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/hp-pavilion-red.jpg"
+    },
+    {
+        "id": "laptop_macbook_air_m2",
+        "name": "MacBook Air M2",
+        "description": "Apple's latest MacBook Air with M2 chip, 8GB unified memory, and 256GB SSD. Incredibly thin and light design.",
+        "price": 999.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "space gray",
+            "processor": "Apple M2",
+            "ram": "8GB",
+            "storage": "256GB SSD",
+            "screen_size": "13.6 inch",
+            "brand": "Apple",
+            "rating": 4.7,
+            "weight": "2.7 lbs",
+            "os": "macOS"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/macbook-air-m2.jpg"
+    },
+    {
+        "id": "laptop_lenovo_thinkpad_black",
+        "name": "Lenovo ThinkPad X1 Carbon",
+        "description": "Premium business laptop with Intel Core i7, 16GB RAM, and 1TB SSD. Durable and reliable.",
+        "price": 1299.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "black",
+            "processor": "Intel Core i7-1165G7",
+            "ram": "16GB",
+            "storage": "1TB SSD",
+            "screen_size": "14 inch",
+            "brand": "Lenovo",
+            "rating": 4.6,
+            "weight": "2.5 lbs",
+            "os": "Windows 11"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/lenovo-thinkpad-x1.jpg"
+    },
+    {
+        "id": "laptop_asus_red_gaming",
+        "name": "ASUS ROG Strix Red Gaming Laptop",
+        "description": "High-performance gaming laptop with NVIDIA RTX 4060, AMD Ryzen 7, and RGB keyboard.",
+        "price": 1199.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "red",
+            "processor": "AMD Ryzen 7",
+            "ram": "16GB",
+            "storage": "1TB SSD",
+            "screen_size": "15.6 inch",
+            "brand": "ASUS",
+            "rating": 4.4,
+            "weight": "5.1 lbs",
+            "os": "Windows 11",
+            "graphics": "NVIDIA RTX 4060"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/asus-rog-red.jpg"
+    },
+    {
+        "id": "laptop_surface_red",
+        "name": "Microsoft Surface Laptop 5 Red",
+        "description": "Elegant touchscreen laptop with Intel Core i5, perfect for productivity and creativity.",
+        "price": 799.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "red",
+            "processor": "Intel Core i5",
+            "ram": "8GB",
+            "storage": "256GB SSD",
+            "screen_size": "13.5 inch",
+            "brand": "Microsoft",
+            "rating": 4.3,
+            "weight": "2.8 lbs",
+            "os": "Windows 11",
+            "touchscreen": true
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/surface-laptop-red.jpg"
+    },
+    {
+        "id": "laptop_acer_red_swift",
+        "name": "Acer Swift 3 Red Edition",
+        "description": "Lightweight laptop with Intel Core i5, 8GB RAM, and fast startup times.",
+        "price": 549.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "red",
+            "processor": "Intel Core i5",
+            "ram": "8GB",
+            "storage": "512GB SSD",
+            "screen_size": "14 inch",
+            "brand": "Acer",
+            "rating": 4.1,
+            "weight": "2.65 lbs",
+            "os": "Windows 11"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/acer-swift-red.jpg"
+    },
+    {
+        "id": "smartphone_iphone_14_blue",
+        "name": "iPhone 14 Blue",
+        "description": "Apple iPhone 14 with A15 Bionic chip, 128GB storage, and advanced camera system.",
+        "price": 799.99,
+        "category": "smartphones",
+        "metadata": {
+            "color": "blue",
+            "storage": "128GB",
+            "brand": "Apple",
+            "screen_size": "6.1 inch",
+            "rating": 4.8,
+            "os": "iOS",
+            "camera": "12MP dual camera"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/iphone-14-blue.jpg"
+    },
+    {
+        "id": "tablet_ipad_air_purple",
+        "name": "iPad Air Purple",
+        "description": "iPad Air with M1 chip, 64GB storage, and 10.9-inch Liquid Retina display.",
+        "price": 599.99,
+        "category": "tablets",
+        "metadata": {
+            "color": "purple",
+            "storage": "64GB",
+            "brand": "Apple",
+            "screen_size": "10.9 inch",
+            "rating": 4.6,
+            "os": "iPadOS",
+            "processor": "Apple M1"
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/ipad-air-purple.jpg"
+    },
+    {
+        "id": "laptop_hp_envy_silver",
+        "name": "HP ENVY x360 Silver",
+        "description": "2-in-1 convertible laptop with touchscreen and stylus support. Perfect for creativity.",
+        "price": 899.99,
+        "category": "laptops",
+        "metadata": {
+            "color": "silver",
+            "processor": "AMD Ryzen 5",
+            "ram": "12GB",
+            "storage": "512GB SSD",
+            "screen_size": "15.6 inch",
+            "brand": "HP",
+            "rating": 4.4,
+            "weight": "4.5 lbs",
+            "os": "Windows 11",
+            "touchscreen": true,
+            "convertible": true
+        },
+        "availability": true,
+        "image_url": "https://example.com/images/hp-envy-silver.jpg"
+    }
+] 
